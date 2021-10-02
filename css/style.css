@@ -1,4 +1,65 @@
 .header{
   height: 150px;
-  border: 1px solid black
+  border: 1px solid blue;
+  margin-bottom: 20px;
+}
+
+.header-contents{
+  width:980px;
+  margin:0 auto;
+  border: 1px solid red;
+}
+
+
+.logo{
+  width:200px;
+  border: 1px solid black;
+}
+
+.contents{
+  width:980px;
+  margin: 0 auto;
+  border: 1px solid purple;
+}
+
+.visual{
+  height: 400px;
+  
+}
+
+.copy{
+  height: 250px;
+  margin-top: 50px;
+  border: 1px solid black;
+  width:300px;
+}
+
+.text-wrapper{
+  height: 200px;
+  display:flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+
+.text{
+  width:380px;
+  border: 1px solid green;
+}
+
+.menu{
+  width:360px;
+  border: 1px solid blue;
+}
+
+
+.footer{
+  height: 120px;
+  border: 1px solid blue;
+  margin-top:30px;
+}
+.footer-contents{
+  margin:0 auto;
+  width:980px;
+  text-align: center;
 }
