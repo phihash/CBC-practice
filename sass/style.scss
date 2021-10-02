@@ -1,3 +1,7 @@
+@mixin setCenter{
+  display:flex;
+  align-items: center;
+}
 body{
   margin:0;
 }
@@ -7,26 +11,22 @@ body{
   margin-bottom:20px;
   /*border: 1px solid #000;*/  /*← 削除する */
   background-color:#d9e021;
-  display: flex;
-  align-items: center;
+  @include setCenter;
+  .header-contents{
+    width:980px;
+    margin:0 auto;
+  }
 }
-
-.header-contents{
-  width:980px;
-  margin:0 auto;
-}
-
 
 .logo{
   width:200px;
   color:#52b6ac;
   font-size:12px;
-  display:flex;
-  align-items:center;
-}
-.logo img{
-  width:50px;
-  margin-right:10px;
+  @include setCenter;
+  img{
+    width:50px;
+    margin-right:10px;
+  }
 }
 
 .contents{
@@ -37,8 +37,7 @@ body{
 .visual{
   height:400px;
   background: url("../images/top_bg.jpg") no-repeat center center;
-  display: flex;
-  align-items: center;
+  @include setCenter;
 }
 
 .copy{
@@ -47,40 +46,33 @@ body{
   font:normal 32px/2em sans-serif;
 }
 
-
-
 .text-wrapper{
   height: 200px;
   display:flex;
   justify-content: center;
+  .text{
+    width:280px;
+    margin-top:20px;
+    padding-right:15px;
+    border-right:8px solid #666; /*右側の黒い線*/
+    font:normal 18px/2em sans-serif;
+    @include setCenter;
+  }
+  .menu{
+    width:300px;
+    width:300px;
+    font:normal 18px/1.6em sans-serif;
+    display:flex;
+    align-items: center;
+    li{
+      list-style: none;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-
-.text{
-  width:280px;
-  margin-top:20px;
-  padding-right:15px;
-  border-right:8px solid #666; /*右側の黒い線*/
-  font:normal 18px/2em sans-serif;
-  display:flex;
-  align-items: center
-}
-
-.menu{
-  width:300px;
-  width:300px;
-  font:normal 18px/1.6em sans-serif;
-  display:flex;
-  align-items: center;
-}
-
-li{
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
 
 .footer{
   height: 120px;
@@ -88,11 +80,12 @@ a {
   background-color:#bec9c9;
   display:flex;
   justify-content: center;
+  .footer-contents{
+    text-align: center;
+    width:980px;
+    align-self: flex-end;
+  }
 }
-.footer-contents{
-  text-align: center;
-  width:980px;
-  align-self: flex-end;
-}
+
 
 
